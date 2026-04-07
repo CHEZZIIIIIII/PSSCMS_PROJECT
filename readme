@@ -1,0 +1,113 @@
+📘 Palatiw School Supply Consolidation and Management System (PSSCMS)
+
+A PHP-based record system designed to help Palatiw Elementary School manage student supply records, uniform sizes, grade-level data, and consolidated reporting.
+Built for XAMPP (PHP + MySQL) environments.
+
+📂 Project Structure
+psscms_project/
+│
+├── Grade1/
+├── Grade2/
+├── Grade3/
+├── Grade4/
+├── Grade5/
+├── Grade6/
+│
+├── add_account.php
+├── admin_dashboard.php
+├── consolidated_report.php
+├── fix_supplies_links.py
+├── fix_uniform_links.py
+├── index.php
+├── logout.php
+├── select_grade.php
+├── select_section.php
+├── student_summary.php
+├── supplies_summary.php
+├── teacher_grade1.php
+├── uniform_summary.php
+│
+├── palatiw_school.jpg
+├── palatiw_school2.jpg
+├── logo.png
+│
+├── config.example.php       ← safe sample config
+├── database.sql             ← exported MySQL database
+└── .gitignore               ← ignores sensitive files
+✨ Features
+📘 Manage school supply records per grade
+👕 Uniform size summary & student records
+📊 Consolidated school-wide reports
+🧮 Grade-specific dashboards (Grade 1 – Grade 6)
+🔐 Admin account creation
+🗂️ Section-based selection and filtering
+🖼️ Image/file linking (school logo, images, etc.)
+🐍 Python utilities to repair broken data links
+⚙️ Local Installation (XAMPP / Localhost)
+1️⃣ Install Requirements
+XAMPP (Apache + MySQL)
+PHP 7.4+
+MySQL / MariaDB
+Browser (Chrome, Edge, etc.)
+2️⃣ Place the Project Folder
+
+Move psscms_project into:
+
+C:\xampp\htdocs\
+
+Access it in the browser:
+
+http://localhost/psscms_project
+3️⃣ Import the Database
+Open XAMPP Control Panel
+Start Apache and MySQL
+Open phpMyAdmin
+Create a database:
+palatiw_elementary
+Click Import
+Select:
+database.sql
+Click Go
+
+Database is now installed.
+
+4️⃣ Configure database connection
+
+Inside the project, duplicate:
+
+config.example.php
+
+Rename it to:
+
+config.php
+
+Edit the credentials if needed:
+
+$host = 'localhost';
+$username = 'root';
+$password = '';
+$database = 'palatiw_elementary';
+🔐 Security Notes
+DO NOT upload your real config.php to GitHub
+Only upload config.example.php
+.gitignore protects sensitive files
+SQL file contains structure + sample records (safe)
+🧩 Python Utility Scripts
+File	Purpose
+fix_supplies_links.py	Fixes incorrect or missing supply record links
+fix_uniform_links.py	Repairs uniform-related links or filenames
+📜 Usage
+Open browser
+Go to:
+http://localhost/psscms_project
+Login or navigate through grade dashboards
+View or update supply/uniform records
+Export or view summary reports
+🛠️ Developer Notes
+Uses PHP MySQLi for database connection
+Organized by grade-level folders
+Works on local XAMPP and production servers
+Easy to modify and extend
+📄 License
+
+This project is for academic and school system use only.

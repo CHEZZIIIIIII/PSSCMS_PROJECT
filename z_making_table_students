@@ -1,0 +1,60 @@
+CREATE TABLE tblgradesection (
+    id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+    lrn_number VARCHAR(20) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    first_name VARCHAR(50) NOT NULL,
+    middle_name VARCHAR(50) NOT NULL,
+    age INT(10) UNSIGNED NOT NULL,
+    gender ENUM('MALE', 'FEMALE') NOT NULL,
+    contact_number VARCHAR(15) NOT NULL,
+    parent_name VARCHAR(100) NOT NULL,
+    parent_contact VARCHAR(15) NOT NULL,
+    PRIMARY KEY (id),
+    INDEX (lrn_number)
+) ENGINE=InnoDB
+DEFAULT CHARSET=latin1
+COLLATE=latin1_swedish_ci;
+
+CREATE TABLE tblgradesectionsupplies (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    lrn VARCHAR(50) NOT NULL,
+    student_name VARCHAR(255) NOT NULL,
+    notebooks VARCHAR(50) DEFAULT NULL,
+    padpaper VARCHAR(50) DEFAULT NULL,
+    bag VARCHAR(50) DEFAULT NULL,
+    ballpen VARCHAR(50) DEFAULT NULL,
+    pencil VARCHAR(50) DEFAULT NULL,
+    sharpener VARCHAR(50) DEFAULT NULL,
+    crayons VARCHAR(50) DEFAULT NULL,
+    eraser VARCHAR(50) DEFAULT NULL,
+    ruler VARCHAR(50) DEFAULT NULL,
+    scissors VARCHAR(50) DEFAULT NULL,
+    glue VARCHAR(50) DEFAULT NULL,
+    created_by VARCHAR(100) DEFAULT NULL,
+    date_updated TIMESTAMP NOT NULL
+        DEFAULT CURRENT_TIMESTAMP
+        ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB
+DEFAULT CHARSET=latin1
+COLLATE=latin1_swedish_ci;
+
+CREATE TABLE tblgradesectionuniform (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    lrn VARCHAR(50) NOT NULL,
+    student_name VARCHAR(255) NOT NULL,
+    gender ENUM('MALE', 'FEMALE') NOT NULL,
+    pe_tshirt VARCHAR(10) DEFAULT NULL,
+    pe_pants VARCHAR(10) DEFAULT NULL,
+    socks VARCHAR(10) DEFAULT NULL,
+    shoes VARCHAR(10) DEFAULT NULL,
+    school_uniform VARCHAR(10) DEFAULT NULL,
+    uniform_bottom VARCHAR(10) DEFAULT NULL,
+    created_by VARCHAR(100) DEFAULT NULL,
+    date_updated TIMESTAMP NOT NULL
+        DEFAULT CURRENT_TIMESTAMP
+        ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB
+DEFAULT CHARSET=latin1
+COLLATE=latin1_swedish_ci;
